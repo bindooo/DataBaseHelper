@@ -8,52 +8,47 @@ public class Contact {
 
     //private variables
     int _id;
-    String fname;
-    String lname;
+    String barcode;
+    String product;
 
     // Empty constructor
     public Contact(){
 
     }
     // constructor
-    public Contact(int id, String fname, String lname){
+    public Contact(int id, String barcode, String product){
         this._id = id;
-        this.fname = fname;
-        this.lname = lname;
+        this.barcode = barcode;
+        this.product = product;
     }
 
     // constructor
-    public Contact(String fname, String lname){
-        this.fname = fname;
-        this.lname = lname;
+    public Contact(String barcode, String product){
+        this.barcode = barcode;
+        this.product = product;
     }
-    // getting ID
+
     public int getID(){
         return this._id;
     }
 
-    // setting id
     public void setID(int id){
         this._id = id;
     }
 
-    // getting name
-    public String getFirstName(){
-        return this.fname;
+    public String getBarcode(){
+        return this.barcode;
     }
 
-    // setting name
-    public void setFirstName(String fname){
-        this.fname = fname;
+    public void setBarcode(String barcode){
+        this.barcode = barcode;
     }
 
-    // getting phone number
-    public String getLastName(){
-        return this.lname;
+    public String getProduct(){
+        return this.product;
     }
 
-    // setting phone number
-    public void setLastName(String lname){
-        this.lname = lname;
+    public void setProduct(String product){
+        this.product = product;
     }
 }
