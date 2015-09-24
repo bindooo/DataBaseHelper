@@ -1,6 +1,7 @@
 package com.faveoffate.databasehelper;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListAdapter;
@@ -39,6 +41,17 @@ public class MainActivity extends Activity {
         db = (new DataBaseHelper(this)).getReadableDatabase();
         searchText = (EditText) findViewById (R.id.searchText);
         employeeList = (ListView) findViewById (R.id.list);
+
+        Button button =(Button)findViewById(R.id.viewDBButton);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                Intent dbmanager = new Intent(MainActivity.this,AndroidDatabaseManager.class);
+                startActivity(dbmanager);
+            }
+        });
+
     }
 
     public void search(View view) {

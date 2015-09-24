@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="com.faveoffate.databasehelper.AndroidDatabaseManager"
+            android:theme="@style/Theme.AppCompat.Light"/>
     </application>
 
 </manifest>
